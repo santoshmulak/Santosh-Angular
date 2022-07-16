@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SininComponent } from './sinin/sinin.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignoutComponent } from './signout/signout.component';
 
@@ -8,12 +7,14 @@ import { SignoutComponent } from './signout/signout.component';
 
 @NgModule({
   declarations: [
-    SininComponent,
     SigninComponent,
-    SignoutComponent
-  ],
+    SignoutComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    SigninComponent,
+    SignoutComponent
   ]
 })
 export class UserModule { }
