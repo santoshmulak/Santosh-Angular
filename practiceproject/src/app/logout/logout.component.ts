@@ -9,6 +9,7 @@ import { StorageService } from '../storage.service';
 })
 export class LogoutComponent implements OnInit {
   data: any;
+  hide = true;
   constructor(private serviceStorage : StorageService) { }
   ngOnInit(): void {
     console.log("before defining",this.serviceStorage.serviceData);
