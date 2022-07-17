@@ -12,4 +12,29 @@
     <p>inside if block </p>
 </div>
 <h2 *ngIf="!hide">else block</h2><!--negation property-->
+<h3>we are learning *ngFor</h3>
+<div><!--static-->
+    {{colors[2]}}<!--with index-->
+</div><br><br>
+<div *ngFor="let colorItemes of colors">  <!--dyanamic-->
+    {{colorItemes}}
+</div><br>
+<p>{{info.myInfo1.city}}</p>
+<h1>ngSwitch</h1><!--syntax-->
+<div [ngSwitch]="car"> 
+    <p *ngSwitchCase="'swift'">i have swift car</p>
+    <p *ngSwitchCase="'fortuner'">i have fortuner car</p>
+    <p *ngSwitchCase="'endeavur'">i have endeavur car</p>
+    <p *ngSwitchCase="'ertiga'">i have ertigs car</p>
+    <p *ngSwitchCase="'i20'">i have i20 car</p>
+    <p *ngSwitchDefault>i have no car</p>
+</div><br>
+<h1 style="background-color: brown;">ngStyle inline scss</h1>
+<h2 [ngStyle]="{'background-color':'red'}">ng style css</h2>
+<h2 [ngStyle]="{'background-color':colorOf}">Dynamic data binding</h2>
+<div [ngStyle]="{'color': colorOf==='yellow'?'yellow':'blue' }">
+     this is conditional style binding or ternery
+</div>
+ 
+
 
