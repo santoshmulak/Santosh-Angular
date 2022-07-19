@@ -1,18 +1,18 @@
-<p>logout works!</p>
+<p appCustom>logout works!</p>
 <!-- <button (click)="getData()">getDataLogOut</button> -->
 <!--Directive-->
 <!--component directive-->
 <!--strutural directive *ngIf ,*ngFor,*ngSwitch-->
 <!--alttribute directive ngClass, ngStyle-->
 <!--custome directive manully ganerated ng g d directive name-->
-<h1>we are learning directive</h1>
+<h1 appCustom>we are learning directive</h1>
 <!-- <h2 *ngIf="hide">if block</h2> -->
 <div *ngIf="hide">
     <h2>new if block</h2>
     <p>inside if block </p>
 </div>
 <h2 *ngIf="!hide">else block</h2><!--negation property-->
-<h3>we are learning *ngFor</h3>
+<h3 appCustom>we are learning *ngFor</h3>
 <div><!--static-->
     {{colors[2]}}<!--with index-->
 </div><br><br>
@@ -35,6 +35,64 @@
 <div [ngStyle]="{'color': colorOf==='yellow'?'yellow':'blue' }">
      this is conditional style binding or ternery
 </div>
- 
+<div *ngFor="let item of items ; let i = 'index + 1'">
+    {{i}} . {{item.name}} {{item.ph}}
+</div> 
+<h1>ngClass</h1>
+<div class="main">
+   <p>we ara learining ngClass</p> 
+   <p>simple css treat and forward</p>
+</div>       
+<div [ngClass]="'main main1'">
+    <p>we ara learining with ngClass</p> 
+    <p>simple css treat and forward</p>
+ </div>             
+ <div [ngClass]="styleProp">
+    <p>we ara learining with ngClass on property</p> 
+    <p>simple css treat and forward</p>
+ </div>    
+ <div [ngClass]="styleFun()">
+    <p>we ara learining with ngClass on function<p>
+    <p>simple css treat and forward</p>
+ </div>     
+ <div [ngClass]="styleProp=='main'?'main':'main1'">
+    <p>we ara learining ng class with ternary operator<p>
+    <p>simple css treat and forward</p>
+ </div><br>
+ <!--custom directive-->   
+<h1 appCustom>we are learning custom directive</h1>
+<h6 appCustom>111111111111111</h6>
+<!--headling user event-->
+<h1 appHighLight>this is custom directive headling user event</h1>
+<div>
+    <input type="radio" name="color1" (click)="directiveColor='red'">red
+    <input type="radio" name="color1" (click)="directiveColor='green'">green
+    <input type="radio" name="color1" (click)="directiveColor='blue'">blue
+</div>
+<!--passing value by taking input-->
+<h3 [appHighLight]="directiveColor" >passing value</h3>
+<!--character only directive-->
+<!-- <input appCharacterOnly type="text">full name<br> -->
+<!-- <input appCharacterOnly type="text">Pan no<br> -->
+<input appCharacterOnly type="text">only number<br>
+<!-- <input appCharacterOnly type="text">email number<br> -->
+<h1>pipes in angular</h1>
+<!--|  pipes in angular-->
+<h2>{{name | uppercase}}</h2>
+<h2>{{name | lowercase}}</h2>
+<h2>{{name | titlecase}}</h2>
+<h2>{{date | date : "MM/dd/YYYY"}}</h2>
+<!-- <h2>{{a | currency : 'CAD'}}</h2> -->
+<h2>{{b | percent}}</h2>
+<h2>{{pi | number : '4.1-5'}}</h2>
+<h2>{{str | slice : 0:5}}</h2>
+<h2>{{object | json}}</h2>
+<h2>custom pipes</h2>
+<h2>{{10 | currency}}</h2>
+
+
+
+
+
 
 

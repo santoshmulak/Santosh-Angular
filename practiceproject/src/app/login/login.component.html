@@ -1,10 +1,10 @@
 <p>login works!</p>
-<h1>Function call</h1>
+<h1 appCustom>function call</h1>
 <button (click)="getData('tom')">click</button>
 <br><br>
 <button (click)="getData2('sunny')">click</button>
 <br><br>
-<h1>event on input tag</h1>
+<h1 appCustom>event on input tag</h1>
 <input type="text" (keyup)="getData('keyup')" placeholder="keyup">
 <br><br>
 <input type="text" ((keydown))="getData2('keydown')" placeholder="keydown">
@@ -17,7 +17,7 @@
 <input type="text" (keypress)="onKeypressEvent($event)"><br><br>
 <input type="text" (change)="changeFun($event)" placeholder="change event"><br><br>
 <button (click)="getServiceData()">serviceData</button>
-<h1>we are lerning interpolation</h1><!--interpolation syntax {{property}}-->
+<h1 appCustom>we are lerning interpolation</h1><!--interpolation syntax {{property}}-->
 <h3>{{surname}} property interpolation</h3>
 <p>{{getInterpolation()}} function interpolation</p>
 <p>{{getInter()}}interpolation</p>
@@ -40,6 +40,8 @@
 <!--[(ngModule)]-->
 <input type="text" [(ngModel)] = "ngName">
 <p>{{ngName}} {{number}}</p>
+<h1 appHighLight>HighLight me</h1>
+
 
 
 

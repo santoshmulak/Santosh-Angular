@@ -9,6 +9,12 @@ import { Popup1Component } from './popup/popup1/popup1.component';
 import { TestComponent } from './test/test.component';
 import { UserModule } from './user/user.module';
 import { FormsModule } from '@angular/forms';
+import { CustomDirective } from './directive/custom.directive';
+import { HighLightDirective } from './directive/high-light.directive';
+import { CharacterOnlyDirective } from './directive/character-only.directive';
+import { CurrencyPipe } from './pipe/currency.pipe';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -17,13 +23,19 @@ import { FormsModule } from '@angular/forms';
     LogoutComponent,
     PopupComponent,
     Popup1Component,
-    TestComponent
+    TestComponent,
+    CustomDirective,
+    HighLightDirective,
+    CharacterOnlyDirective,
+    CurrencyPipe,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     UserModule,
     FormsModule,
+    // AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
