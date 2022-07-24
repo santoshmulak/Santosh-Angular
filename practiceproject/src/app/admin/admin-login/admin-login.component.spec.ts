@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminlogoutComponent } from './adminlogout.component';
+import { AdminLoginComponent } from './admin-login.component';
 
-describe('AdminlogoutComponent', () => {
-  let component: AdminlogoutComponent;
-  let fixture: ComponentFixture<AdminlogoutComponent>;
+describe('AdminLoginComponent', () => {
+  let component: AdminLoginComponent;
+  let fixture: ComponentFixture<AdminLoginComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminlogoutComponent ]
+      declarations: [ AdminLoginComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AdminlogoutComponent);
+    fixture = TestBed.createComponent(AdminLoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

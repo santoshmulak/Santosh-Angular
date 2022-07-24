@@ -1,0 +1,36 @@
+<p>admin-login works!</p>
+<button (click)="routing()"> Router</button>
+
+<div class="main">
+    <h2>Templete Driven</h2>
+    <h3>Admin Login Form</h3>
+    <div>
+        <form #adminForm="ngForm" (ngSubmit)="adminFormData(adminForm.value)" autocomplete="off">
+            <input type="text" name="adminFirstName" #name='ngModel'required placeholder="enter your first name" [ngModel]="adminData.name">Enter Your first Name
+            <br>
+            <span *ngIf="name.touched && name.invalid" id="span">Please Enter Your Name !</span>
+             <br>
+            <input type="text" name="adminLastName" placeholder="enter your last name" ngModel>Enter Your Last Name
+            <br><br>
+            <input type="tel" name="adminMobile" minlength="10" maxlength="10" #num="ngModel" placeholder="enter your monble number" [ngModel]="adminData.mobn">Enter Your Mobile Number
+            <br>
+            <span *ngIf="num.invalid" id="span">mobile number is required*</span>
+            <br>
+            <button mat-raised-button color="accent">Submit</button>
+        </form>
+    </div>
+</div>
+<hr>
+<div class="main1">
+<form #loginForm="ngForm" (ngSubmit)="loginFun(loginForm.value)">
+    <input type="email" required #name1="ngModel" email name="Name" placeholder="Enter Your Name" ngModel>Enter Your Email
+    <br>
+    <span *ngIf="name1.invalid && name1.touched" style="color: red;">Please Enter valild input </span>
+    <br>
+    <input type="text" required #password="ngModel" name="password" placeholder="Enter Your Password" ngModel>Enter Your Password
+    <br>
+    <span *ngIf="password.invalid && password.touched" id="span">mobile number is required*</span>
+    <br>
+    <button [disabled]= "loginForm.invalid">submit</button>
+</form>
+</div>

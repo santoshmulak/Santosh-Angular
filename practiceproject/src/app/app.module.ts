@@ -15,6 +15,9 @@ import { CharacterOnlyDirective } from './directive/character-only.directive';
 import { CurrencyPipe } from './pipe/currency.pipe';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AdminModule } from './admin/admin.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StudentModule } from './student/student.module';
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -28,13 +31,16 @@ import { AdminModule } from './admin/admin.module';
     HighLightDirective,
     CharacterOnlyDirective,
     CurrencyPipe,
-    PagenotfoundComponent
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     UserModule,
     FormsModule,
+    BrowserAnimationsModule,
+    StudentModule,
+    MatButtonModule,
     // AdminModule
   ],
   providers: [],

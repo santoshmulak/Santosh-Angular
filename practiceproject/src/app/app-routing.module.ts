@@ -8,8 +8,8 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'logout',component:LogoutComponent},
   // {path:'**',component:PagenotfoundComponent},
-  {path:'student',loadChildren:()=>import('./student/student.module').then(modu=>modu.StudentModule)},
-  {path:'admin',loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)},
+  {path:'student', loadChildren:()=>import('./student/student.module').then(modu=>modu.StudentModule)},
+  {path:'admin', loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)},
   { path: 'about', loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsModule) }
 ];
 

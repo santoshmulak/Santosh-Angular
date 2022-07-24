@@ -1,1 +1,16 @@
 <p>studentlogin works!</p>
+<div class="main">
+    <form [formGroup]="studentForm!">
+        <h2>Reactive Form</h2>
+        <h3>Student Login Form</h3>
+        <input type="text" formControlName="studentName">Student Name
+        <br><br>
+        <input type="text" formControlName="studentMob">Student Mob No
+        <br><br>
+         <input type="text" formControlName="studentEmail">Student Student Email
+        <br><br>
+        <button  (click)="StudentFormDtata()">submit</button>
+        <!-- <button (click)="StudentFormDtata()"mat-raised-button color="warn">Submit</button> -->
+    </form>
+</div>
+

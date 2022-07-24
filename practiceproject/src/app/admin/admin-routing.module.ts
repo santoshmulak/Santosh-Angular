@@ -1,17 +1,11 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminloginComponent } from './adminlogin/adminlogin.component';
-import { AdminlogoutComponent } from './adminlogout/adminlogout.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminLogoutComponent } from './admin-logout/admin-logout.component';
 
 const routes: Routes = [
-  // {
-  //   path:'admin',children:[
-  //     { path: 'adminLogin',component:AdminloginComponent},
-  //     { path: 'adminLogout',component:AdminlogoutComponent},
-  //   ]
-  // }
-  { path: 'adminLogin', component: AdminloginComponent },
-  { path: 'adminLogout', component: AdminlogoutComponent },
+  {path: 'adminLogin', component: AdminLoginComponent},
+  {path: 'adminLogout', component: AdminLogoutComponent},
 ];
 
 @NgModule({

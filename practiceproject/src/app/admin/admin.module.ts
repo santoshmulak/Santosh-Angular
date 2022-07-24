@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { AdminRoutingModule } from './admin-routing.module';
-import { AdminloginComponent } from './adminlogin/adminlogin.component';
-import { AdminlogoutComponent } from './adminlogout/adminlogout.component';
-console.log('adminModule');
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminLogoutComponent } from './admin-logout/admin-logout.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
-    AdminloginComponent,
-    AdminlogoutComponent
+    AdminLoginComponent,
+    AdminLogoutComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
-  ],
-  exports: [
-    AdminloginComponent,
-    AdminlogoutComponent
+    AdminRoutingModule,
+    FormsModule,
+    // BrowserAnimationsModule,
+    MatButtonModule,
   ]
 })
 export class AdminModule { }
