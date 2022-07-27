@@ -29,7 +29,7 @@ import { MatButtonModule } from "@angular/material/button";
     TestComponent,
     CustomDirective,
     HighLightDirective,
-    CharacterOnlyDirective,
+    // CharacterOnlyDirective,
     CurrencyPipe,
     PagenotfoundComponent,
   ],

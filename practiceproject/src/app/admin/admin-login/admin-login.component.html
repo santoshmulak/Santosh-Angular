@@ -6,19 +6,22 @@
     <h3>Admin Login Form</h3>
     <div>
         <form #adminForm="ngForm" (ngSubmit)="adminFormData(adminForm.value)" autocomplete="off">
-            <input type="text" name="adminFirstName" #name='ngModel'required placeholder="enter your first name" [ngModel]="adminData.name">Enter Your first Name
+            <input type="text" name="adminFirstName" #name='ngModel' appCharacterOnly required placeholder="enter your first name" [ngModel]="adminData.name">Enter Your first Name
             <br>
-            <span *ngIf="name.touched && name.invalid" id="span">Please Enter Your Name !</span>
+            <span *ngIf="name.touched && name.invalid || name.errors?.['required']"id="span">Please Enter Your Name !</span>
              <br>
-            <input type="text" name="adminLastName" placeholder="enter your last name" ngModel>Enter Your Last Name
-            <br><br>
-            <input type="tel" name="adminMobile" minlength="10" maxlength="10" #num="ngModel" placeholder="enter your monble number" [ngModel]="adminData.mobn">Enter Your Mobile Number
+            <input type="text" name="adminLastName" #email="ngModel" placeholder="enter your email" ngModel>Enter Your Email
             <br>
-            <span *ngIf="num.invalid" id="span">mobile number is required*</span>
+            <!-- <span *ngIf="email.errors?.email"></span> -->
             <br>
-            <button mat-raised-button color="accent">Submit</button>
+            <input type="tel" name="adminMobile" pattern="[0-9]*" minlength="10" maxlength="10" #num="ngModel" placeholder="enter your monble number" [ngModel]="adminData.mobn">Enter Your Mobile Number
+            <br>
+            <span *ngIf="num.errors?.['pattern']" id="span">mobile number is required*</span>
+            <br>
+            <!-- <button mat-raised-button color="accent" [disabled]="adminForm.invalid">Submit</button> -->
+            <button [disabled]="adminForm.invalid">Submit</button>
         </form>
-    </div>
+    </div> 
 </div>
 <hr>
 <div class="main1">
@@ -31,6 +34,6 @@
     <br>
     <span *ngIf="password.invalid && password.touched" id="span">mobile number is required*</span>
     <br>
-    <button [disabled]= "loginForm.invalid">submit</button>
-</form>
+    <button [disabled]="loginForm.invalid">submit</button>
+</form> 
 </div>

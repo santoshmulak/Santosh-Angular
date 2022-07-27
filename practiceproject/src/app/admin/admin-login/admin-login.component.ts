@@ -21,8 +21,10 @@ export class AdminLoginComponent implements OnInit {
     this.router.navigateByUrl('login') 
   }
 
-  adminFormData(adminFormData:any){
+  adminFormData(adminFormData:any, abc?:any){
     console.log(adminFormData);
+    console.log(abc);
+    
   }
   loginFun(item:any){
    console.log(item);

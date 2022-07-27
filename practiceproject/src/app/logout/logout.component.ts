@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TitleStrategy } from '@angular/router';
+import { DataService } from '../data.service';
 import { StorageService } from '../storage.service';
 
 @Component({
@@ -7,6 +8,7 @@ import { StorageService } from '../storage.service';
   templateUrl: './logout.component.html',
   styleUrls: ['./logout.component.scss']
 })
+
 export class LogoutComponent implements OnInit {
   data: any;
   hide = true;
@@ -44,7 +46,9 @@ export class LogoutComponent implements OnInit {
     {name:"virat",age:"33",email:"viratkohmuak99@gmail.com",ph:"993889393"},
     {name:"rohit",age:"46",email:"rohitjfhmulak77@gmail.com",ph:"9860908859"},
   ]
-  constructor(private serviceStorage: StorageService) { }
+  carsData:any;
+
+  constructor(private serviceStorage: StorageService, private dataService:DataService) { }
   ngOnInit(): void {
     console.log("before defining", this.serviceStorage.serviceData);
     this.data = this.serviceStorage.serviceData;
@@ -52,6 +56,7 @@ export class LogoutComponent implements OnInit {
     console.log('after defining', this.serviceStorage.serviceData);
     this.serviceStorage.serviceData = 'Shiva';
     console.log('after reassianing', this.serviceStorage.serviceData);
+    this.carsData=this.dataService.mycars;
   }
   styleFun(){
     return 'main1'

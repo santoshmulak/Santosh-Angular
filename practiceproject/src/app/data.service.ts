@@ -7,6 +7,10 @@ export class DataService {
   strageData:string="i live in paithan"
   cars:any;
   fruit:any;
+  mycars={
+    carName:'fortuner',
+    carPrice:'4500000'
+  }
   constructor() { }
   dataServiceFunction(){
    return this.fruit= {

@@ -7,6 +7,7 @@ import { AdminLogoutComponent } from './admin-logout/admin-logout.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     // BrowserAnimationsModule,
     MatButtonModule,
+    SharedmoduleModule
   ]
 })
 export class AdminModule { }

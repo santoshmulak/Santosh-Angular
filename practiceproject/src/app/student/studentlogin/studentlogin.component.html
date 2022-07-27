@@ -4,12 +4,22 @@
         <h2>Reactive Form</h2>
         <h3>Student Login Form</h3>
         <input type="text" formControlName="studentName">Student Name
-        <br><br>
+        <br>
+        <span class="error" *ngIf="studentForm.get('studentName')?.touched && 
+        !studentForm.get('studentName')?.valid && studentForm.get('studentName')?.hasError?.('required')
+        || studentForm.get('studentName')?.hasError?.('maxlength')">enter valid name</span>
+        <br>
         <input type="text" formControlName="studentMob">Student Mob No
-        <br><br>
+        <br>
+        <span class="error" *ngIf="studentForm.get('studentMob')?.hasError?.('maxlength') && studentForm.get('studentMob')?.hasError?.('pattern')">enter valid number</span>
+        <br>
+        <!-- <span class="error" *ngIf="studentForm.get('studentMob')?.hasError?.('maxlength')">enter valid number</span> -->
+        <br>
          <input type="text" formControlName="studentEmail">Student Student Email
-        <br><br>
-        <button  (click)="StudentFormDtata()">submit</button>
+        <br>
+        <span class="error" *ngIf="studentForm.get('studentEmail')?.hasError?.('email')" >enter valid email</span>
+        <br>
+        <button [disabled]="studentForm.invalid" (click)="studentData()">submit</button>
         <!-- <button (click)="StudentFormDtata()"mat-raised-button color="warn">Submit</button> -->
     </form>
 </div>
