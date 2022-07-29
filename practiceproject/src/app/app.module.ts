@@ -18,6 +18,7 @@ import { AdminModule } from './admin/admin.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentModule } from './student/student.module';
 import { MatButtonModule } from "@angular/material/button";
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MatButtonModule } from "@angular/material/button";
     // CharacterOnlyDirective,
     CurrencyPipe,
     PagenotfoundComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,

@@ -23,4 +23,20 @@
         <!-- <button (click)="StudentFormDtata()"mat-raised-button color="warn">Submit</button> -->
     </form>
 </div>
+<h1>reactive form using angular material</h1>
+<button (click)="studentMatData()">MatFormData</button>
+<br><br>
+<div *ngIf="matForm" >
+    <form [formGroup]="studentMatForm!">
+        <mat-form-field>
+            <mat-label>Student Mat Name</mat-label>
+            <input matInput type="text" formControlName="studentMatName">
+            <mat-hint *ngIf="!studentMatForm.get('studentMatName')?.touched">please enter your name as per adhar card</mat-hint>
+            <mat-error *ngIf="studentMatForm.get('studentMatName')?.hasError?.('maxlength')">Please enter valid name as per Adhar card</mat-error>
+        </mat-form-field>
+        <br><br>
+        <button class="btn" mat-raised-button class="btn" color="warn" (click)="matFormData()">Matsubmit</button>
+    </form>
+</div>
+
 
