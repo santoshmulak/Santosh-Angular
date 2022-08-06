@@ -6,7 +6,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChange, SimpleChanges } from
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit, OnChanges {
-  @Input() name = ''
+   @Input() mobileN : any
 
   constructor() {
     console.log('constuctor calling');

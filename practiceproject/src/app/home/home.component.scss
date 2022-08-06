@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color:aqua;
+    margin: 5px;
+    border-radius: 50px;
+    position: sticky !important;
+    overflow: hidden;
+    display: block;
+    top: 0;
+}
+.navbar ul{
+    overflow: auto;
+}
+.navbar li{
+    list-style: none;
+    float: left;
+    padding: 20px;
+}
+.navbar li a{
+    text-decoration: none;
+    color: red;
+    font-size: 15px;
+    padding: 5px;
+}
+.navbar li a:hover{
+    background-color: darkturquoise;
+    color: coral;
+}
+// .css{
+//     height: 1000px;
+// }
+.main{
+    background-color: rgb(23, 92, 241);
+    border: 2px solid gray;
+    
+}
+.main1{
+    background-color: coral;
+    border: 2px solid purple;
+}

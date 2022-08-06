@@ -1,2 +1,5 @@
 <p>admin-logout works!</p>
+<button (click)="getServiceData()">getServiceData</button>
+<!-- {{adminFormData.adminFirstName}} -->
+<p *ngIf="dataFlag">{{adminFormData.adminFirstName}},{{adminFormData.adminMobile}}</p>
 

@@ -1,0 +1,52 @@
+<p>home works!</p>
+<h1>Our first project</h1>
+<h2>we are learning angular</h2>
+<!-- <app-login></app-login>
+<app-logout></app-logout>
+<app-popup></app-popup>
+<app-popup1></app-popup1>
+<app-signin></app-signin>
+<app-signout></app-signout>
+<app-test></app-test> -->
+<header>
+    <div class="navbar">
+        <div>
+            <ul>
+                <li><a routerLink="/login">Login</a></li>
+                <li><a routerLink="/logout">Logout</a></li>
+                <!-- <a routerLink="more">more</a><br> -->
+                <li><a routerLink="/admin/adminLogin">Admin login</a></li>
+                <li><a routerLink="/admin/adminLogout">Admin logout</a></li>
+                <li><a routerLink="/student/studentLogin">Student login</a></li>
+                <li><a routerLink="/student/studentLogout">Student logout</a></li>
+                <li><a routerLink="/about/aboutUs">About</a></li>
+                <li><a routerLink="/test">text component</a></li>
+                <li><a routerLink="/popup">popup com</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- <div class="css">
+    
+</div> -->
+<!-- <button mat-button color="accent">Angular Material Accent</button> -->
+<!-- <button mat-raised-button color="primary">Primary</button>
+<button mat-raised-button color="accent">Accent</button>
+<button mat-raised-button color="warn">Warn</button> -->
+<!-- <app-child *ngIf="childFlag" [name]="myName"></app-child>
+
+<button (click)="ngDestroy()">ngDestroy</button>
+<input type="text" #inputValue>type something here <br>
+<button (click)="dataFromParToChild(inputValue.value)">data transfer partochild</button><br>
+<app-test (parentData)="parentDataFun($event)"></app-test> -->
+
+<app-datatransfer (childData)="getData($event)"></app-datatransfer><br>
+<div class="main">
+   <h1>{{childData}}</h1>
+</div>
+<br><br>
+<div class="main1">
+    <input type="tel" #mobN>enter mobile no <br><br>
+    <button (click)="sendData(mobN.value)"> data from par to child </button><br>
+    <app-child [mobileN]="userMob"></app-child>
+</div>

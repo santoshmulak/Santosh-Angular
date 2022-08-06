@@ -1,1 +1,5 @@
 <p>popup works!</p>
+<button (click)="getData()">Api call</button> <br>
+<ul>
+    <li *ngFor="let data of ApiData" >{{data.id}}==>{{data.email}}</li>
+</ul>

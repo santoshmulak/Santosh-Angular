@@ -19,6 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentModule } from './student/student.module';
 import { MatButtonModule } from "@angular/material/button";
 import { ChildComponent } from './child/child.component';
+import { HomeComponent } from './home/home.component';
+import { DatatransferComponent } from './datatransfer/datatransfer.component';
+import {HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { ChildComponent } from './child/child.component';
     CurrencyPipe,
     PagenotfoundComponent,
     ChildComponent,
+    HomeComponent,
+    DatatransferComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,9 @@ import { ChildComponent } from './child/child.component';
     BrowserAnimationsModule,
     StudentModule,
     MatButtonModule,
-    // AdminModule
+    HttpClientModule,
+    // AdminModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

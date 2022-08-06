@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-admin-login',
@@ -8,11 +9,12 @@ import { Router } from '@angular/router';
 })
 export class AdminLoginComponent implements OnInit {
   adminData={
-    name:'sasasas',
-    mobn:'9879797998'
+    name:'santosh',
+    mobn:'9860908859'
   }
 
-  constructor(private router : Router) { }
+
+  constructor(private router : Router, private dataService : DataService) { }
 
   ngOnInit(): void {
   }
@@ -24,6 +26,8 @@ export class AdminLoginComponent implements OnInit {
   adminFormData(adminFormData:any, abc?:any){
     console.log(adminFormData);
     console.log(abc);
+    this.dataService.formData = adminFormData;
+    this.dataService.setFormData(adminFormData)
     
   }
   loginFun(item:any){

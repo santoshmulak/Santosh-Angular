@@ -6,11 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  myName = 'vijay patil'
-  title = 'practiceproject';
+ 
   ngOnInit(): void {
   }
-  dataFromParToChild(data:any){
-    this.myName = data
-  }
+ 
 }
