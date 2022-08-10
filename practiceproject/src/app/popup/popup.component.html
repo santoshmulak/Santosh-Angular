@@ -1,5 +1,7 @@
 <p>popup works!</p>
 <button (click)="getData()">Api call</button> <br>
 <ul>
-    <li *ngFor="let data of ApiData" >{{data.id}}==>{{data.email}}</li>
+    <li *ngFor="let data of ApiData" >{{data.id}}==>{{data.adminFirstName}}</li>
 </ul>
+<button (click)="deleteRecord('2')">delete record</button><br><br>
+<button (click)="putRecord('3')">put record</button>

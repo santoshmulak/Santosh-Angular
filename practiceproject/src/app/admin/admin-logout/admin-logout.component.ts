@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -10,9 +11,12 @@ export class AdminLogoutComponent implements OnInit {
   adminFormData:any;
   dataFlag= false;
 
-  constructor(private dataService : DataService) { }
+  constructor( private router: Router ,private dataService : DataService) { }
 
   ngOnInit(): void {
+  }
+  routing(){
+    this.router.navigateByUrl('popup')
   }
   getServiceData(){
     // this.adminFormData = this.dataService.formData

@@ -12,6 +12,7 @@ export class AdminLoginComponent implements OnInit {
     name:'santosh',
     mobn:'9860908859'
   }
+  postResponse: any;
 
 
   constructor(private router : Router, private dataService : DataService) { }
@@ -27,7 +28,14 @@ export class AdminLoginComponent implements OnInit {
     console.log(adminFormData);
     console.log(abc);
     this.dataService.formData = adminFormData;
-    this.dataService.setFormData(adminFormData)
+    this.dataService.setFormData(adminFormData);
+    this.dataService.postApiCall(adminFormData).subscribe((respo)=>{
+      console.log('postApicall',respo);
+      this.postResponse=respo
+      if(this.postResponse.statusKey=="success"){
+
+      }
+    })
     
   }
   loginFun(item:any){

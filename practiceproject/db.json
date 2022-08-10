@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "adminFirstName": "json-server",
+      "adminMobile": "9860908859"
+    },
+    {
+      "adminFirstName": "jayraj",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "adminFirstName": "shivaji",
+      "adminMobile": "8485830984"
+    },
+    {
+      "adminFirstName": "santosh",
+      "adminLastName": "sass",
+      "adminMobile": "9860908859",
+      "id": "J_fD4Xw"
+    },
+    {
+      "adminFirstName": "santoshmulak",
+      "adminLastName": "sasss",
+      "id": "AOuuoqU"
+    },
+    {
+      "adminFirstName": "laxmen",
+      "adminLastName": "sac",
+      "adminMobile": "9738383772",
+      "id": "z4U16QP",
+      "status": "success"
+    },
+    {
+      "adminFirstName": "ganesh",
+      "adminLastName": "",
+      "adminMobile": "9860908859",
+      "id": "5koqrdm"
+    },
+    {
+      "adminFirstName": "shivaji",
+      "adminMobile": "8485830984",
+      "id": "UVMLAfw"
+    },
+    {
+      "id": "5",
+      "adminFirstName": "ram",
+      "adminMobile": "9860908956"
+    }
+  ]
+}
