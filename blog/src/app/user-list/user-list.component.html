@@ -1,0 +1,34 @@
+<p>user-list works!</p>
+<h2>Call function in Angular</h2>
+<button (click)="getName()">get myname</button>
+<h2>Event on function</h2>
+<button (click)="myEvent('click event')">Click me</button>
+<br><br>
+<input type="text" (keyup)="myEvent('keyup')" placeholder="keyup"  />
+<br><br>
+<input type="text" #box (keyup)="myEvent(box.value)"  placeholder="box.value"  />
+<br><br>
+<input type="text" (keyup.enter)="myEvent('keyup')" placeholder="keyup.enter"  />
+<br><br>
+<input type="text" #num (keyup.space)="myEvent(num.value)" placeholder="keyup.space"  />
+<br><br>
+<input type="text" (keydown)="myEvent('keydown')" placeholder="keydown"  />
+<br><br>
+<input type="text" (keypress)="myEvent('keypress')" placeholder="keypress"  />
+<br><br>
+<input type="text" (blur)="myEvent('blur')" placeholder="blur"  />
+<br><br>
+<div 
+(mouseover)="myEvent('mouse in')"
+style="background-color: rgb(247, 243, 14);">
+    Mouse.Event
+</div>
+<h2>Get Text Box Value in Angular</h2>
+<!-- <input type="text" #inp (keyup)="getVal(inp.value)"     /> -->
+<input type="text" #input />
+<button (click)="getVal(input.value)">Get value</button>
+<h2>{{currentVal}}</h2>
+
+
+
+

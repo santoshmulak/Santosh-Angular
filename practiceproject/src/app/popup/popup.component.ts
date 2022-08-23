@@ -9,12 +9,13 @@ import { DataService } from 'src/app/data.service';
 })
 export class PopupComponent implements OnInit {
   ApiData:any;
+  dataList: any;
   constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
   }
   getData(){
-    this.dataService.getApiCall().subscribe((data)=>{
+    this.dataList = this.dataService.getApiCall().subscribe((data)=>{
     this.ApiData = data;
     console.log(data);   
   })
@@ -32,5 +33,11 @@ export class PopupComponent implements OnInit {
     
   })
 }
+   ngOnDestroy(){
+    console.log("calling destroy on unsubcribe");
+    this.dataList.unsubscribe();
+   }
+    
+
 
 }

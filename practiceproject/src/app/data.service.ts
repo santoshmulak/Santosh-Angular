@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -36,7 +37,7 @@ export class DataService {
 
   }
   //API call
-  getApiCall(){       //to get data not required parameters
+  getApiCall():Observable<Object>{       //to get data not required parameters
    return this.http.get(this.url);
   //  return this.http.get(this.url + "/" + 'pjGsaBd')     //to get specific data with id
   }

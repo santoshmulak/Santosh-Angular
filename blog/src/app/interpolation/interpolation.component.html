@@ -1,0 +1,23 @@
+<p>interpolation works!</p>
+<h1>Hello World</h1>
+ {{title}}
+<h2>Interpolation in Angular</h2>
+<h1>{{getName()}}</h1>
+<h2>{{obj.name}}:{{obj.age}}</h2>
+<h3>{{arr}}</h3>
+<h3>{{arr[1]}}</h3>
+<h3>{{arr.length}}</h3>
+<h2>{{10+10}}</h2>
+<h3>{{a+b}}</h3>
+<h2>Property Binding in Angualr</h2>
+<input type="text" [disabled]= "disableBox" value="hello" >  
+<!-- //Property binding handle disable altribute   -->
+<br><br>
+<input type="text" disabled={{disableBox}} [value]="myName" >
+<!-- //interpolation can not binding handle disable altribute  -->
+<br><br>
+<button (click)="enableBox()">Enable TextBox</button>
+<br>
+<h2>Condition im Angular</h2>
+
+

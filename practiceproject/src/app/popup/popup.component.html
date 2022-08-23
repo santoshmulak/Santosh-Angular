@@ -3,5 +3,8 @@
 <ul>
     <li *ngFor="let data of ApiData" >{{data.id}}==>{{data.adminFirstName}}</li>
 </ul>
-<button (click)="deleteRecord('2')">delete record</button><br><br>
+<input type="text" #inputVal>
+<button (click)="deleteRecord(inputVal.value)">delete record</button><br><br> 
+<!-- //"id that specific data delete data -->
 <button (click)="putRecord('3')">put record</button>
+<a  routerLink="/test">test redirect</a>
