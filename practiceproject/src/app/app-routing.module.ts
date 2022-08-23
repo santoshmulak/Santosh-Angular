@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PopupComponent } from './popup/popup.component';
+import { Popup1Component } from './popup/popup1/popup1.component';
 import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
@@ -14,7 +15,9 @@ const routes: Routes = [
   {path:'logout',component:LogoutComponent},
   {path:'test',component:TestComponent},
   {path: 'popup', component: PopupComponent },
+  {path:'popup1',component: Popup1Component},
   // {path:'**',component:PagenotfoundComponent},
+  //lazy loading component with rounting files
   {path:'student', loadChildren:()=>import('./student/student.module').then(modu=>modu.StudentModule)},
   {path:'admin', loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)},
   { path: 'about', loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsModule) }

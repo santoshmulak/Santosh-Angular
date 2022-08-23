@@ -1,0 +1,11 @@
+<p>form works!</p>
+<h1>Simple Form in Angular</h1>
+<!-- import Forms Module in module in which we have create a forms file and also app module 
+tale a ngModel in input to get a input value  -->
+<form #simpleForm="ngForm" (ngSubmit)="getUserValue(simpleForm.value)" autocomplete="off">
+    <input type="text" ngModel name="username" placeholder="Enter Name"><br><br>
+    <input type="text" ngModel name="age" placeholder="Enter Age"><br><br>
+    <input type="text" ngModel name="address" placeholder="Enter Address"><br><br>
+    <input type="password" ngModel name="password" placeholder="Enter Password"><br><br>
+    <button >Get User Value</button>
+</form>

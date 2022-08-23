@@ -1,0 +1,66 @@
+<p>condition works!</p>
+<h2>Condition in Angular</h2>
+<!-- If Condition
+if Eise Condition
+condition with string 
+else if
+condition with property binding -->
+
+<!-- If Condition -->
+<!-- <h2 *ngIf="show">
+    if block
+</h2>
+if Eise Condition
+<h2 *ngIf="show else elseBlock">
+    if block
+</h2>
+<ng-template #elseBlock>
+    <h1>else block</h1>
+</ng-template> -->
+
+<ng-template [ngIf]="color=='red'">
+    <h1>Red block</h1>
+</ng-template>
+<ng-template [ngIf]="color=='green'">
+    <h1>Green block</h1>
+</ng-template>
+<ng-template [ngIf]="color=='blue'">
+    <h1>blue block</h1>
+</ng-template>
+<h2>Switch Case in Angular</h2>
+<!-- if we have multiple colors -->
+<div [ngSwitch]="colors">
+    <h1 style="color: red;" *ngSwitchCase="'red'">
+        red color
+    </h1>
+    <h1 style="color: green;" *ngSwitchCase="'green'">
+        green color
+    </h1>
+    <h1 style="color: blue;" *ngSwitchCase="'blue'">
+        blue color
+    </h1>
+    <h1 style="color: yellow;" *ngSwitchCase="'yellow'">
+        yellow color
+    </h1>
+</div>
+<h2>For loop in Angular for array</h2>
+<h4 *ngFor="let item of data">
+    {{item}}
+</h4>
+
+<h2>for loop with array of Object</h2>
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Email</td>
+    </tr>
+
+    <tr *ngFor="let item of data1">
+    <td>{{item.name}}</td>
+    <td>{{item.age}}</td>
+    <td>{{item.email}}</td>
+
+    </tr>
+</table>
+

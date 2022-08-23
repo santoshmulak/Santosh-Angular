@@ -6,5 +6,9 @@
 <input type="text" #inputVal>
 <button (click)="deleteRecord(inputVal.value)">delete record</button><br><br> 
 <!-- //"id that specific data delete data -->
-<button (click)="putRecord('3')">put record</button>
-<a  routerLink="/test">test redirect</a>
+<button (click)="putRecord('3')">put record</button><br><br>
+<button (click)="getOberData()">getOber record</button><br><br>
+<p *ngIf="carFlag">{{cData}}</p><br>
+<button (click)="getPromises()">promises</button>
+<a  routerLink="/test">test redirect</a><br>
+<button (click)="asyncAwait()">async Await</button>

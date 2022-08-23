@@ -1,0 +1,48 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "userName": "santosh",
+      "userEmail": "santosg@12gamil.com",
+      "userMob": "9860908859",
+      "gender": "male",
+      "userPass": "12345678"
+    },
+    {
+      "userName": "santosh mulak",
+      "userMob": "9860908859",
+      "userEmail": "santoshmulak11@gmail.com",
+      "userPass": "12345678",
+      "gender": "male",
+      "userCheck": true,
+      "id": 2
+    },
+    {
+      "userName": "sachin",
+      "userMob": "9881194132",
+      "userEmail": "sachin@123",
+      "userPass": "12345678",
+      "gender": "male",
+      "userCheck": true,
+      "id": 3
+    }
+  ],
+  "owner": [
+    {
+      "id": 1,
+      "userName": "santosh",
+      "userEmail": "santosg@12gamil.com",
+      "userMob": "9860908859",
+      "gender": "male",
+      "userPass": "12345678"
+    }
+  ],
+  "user": {
+    "userName": "Santosh",
+    "userMob": "9878987676",
+    "userEmail": "ar2@12gmail.com",
+    "userPass": "12345678",
+    "gender": "male",
+    "userCheck": true
+  }
+}

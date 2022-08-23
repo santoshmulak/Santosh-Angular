@@ -9,7 +9,10 @@ export class InterpolationComponent implements OnInit {
   title = 'blog';
   name = "santosh mulak";
   myName="santosh";
-  disableBox=true
+  disableBox=true;
+  today=Date.now();
+  str='Hwllo Angular';
+  val=10
 
   obj={
     name:"sachin",

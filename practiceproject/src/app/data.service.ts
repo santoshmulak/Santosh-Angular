@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,7 @@ export class DataService {
   matFormData:any;
   dataCommingFromChild: any;
   formData:any;
+  subjectData = new Subject<any>();
 
   constructor(private http:HttpClient) { }
   dataServiceFunction(){
@@ -52,4 +53,5 @@ export class DataService {
     return this.http.put(this.url + "/" + id, body)
   }
 
+  
 }

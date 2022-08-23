@@ -1,0 +1,9 @@
+<p>parent works!</p>
+<!-- parenttochild -->
+<!-- <app-child [parentName]="name"></app-child>
+<input type="text" #inpVal>
+<button (click)="parentInput(inpVal.value)">parentInput</button> -->
+
+<!-- childtoparent -->
+<app-child (parentChild)="childParent($event)"></app-child>
+{{childData}}

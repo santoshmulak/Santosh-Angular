@@ -1,1 +1,45 @@
 <p>studentlogout works!</p>
+<div class="main">
+    <form [formGroup]="form!">
+        <h1>login form</h1>
+    <div style="border: 2px solid black;">
+        <br>
+        <input type="text" formControlName="userName">userName
+        <br>
+        <mat-error *ngIf="form.get('userName')?.touched && 
+        !form.get('userName')?.valid && form.get('userName')?.hasError?.('required')
+        || form.get('userName')?.hasError?.('maxlength')">Please enter username</mat-error>
+        <br>
+    </div>
+        <br>
+    <div style="border: 2px solid black;">
+        <br>
+        <input type="text" formControlName="userEmail">userEmail
+        <br>
+        <span class="error" *ngIf="form.get('userEmail')?.hasError?.('email')">enter valid email</span>
+        <br>
+    </div>
+        <br>
+        <div style="border: 2px solid black;">
+            <label for="gender">Gender:</label><br>
+            <input type="radio" value="Male" formControlName="gender">
+            <span>male</span>
+            <input type="radio" value="Female" formControlName="gender">
+            <span>female</span><br>
+            <mat-error *ngIf="form.hasError('required', 'gender')">
+                *Gender required
+            </mat-error>
+        </div>
+        <br>
+        <br>
+        <div style="border: 2px solid black;">
+            <label><input type="checkbox" formControlName="checkbox">Accept term and conditions
+            </label><br>
+            <mat-error *ngIf="form.hasError('required', 'checkbox')">
+                *Mandatory
+            </mat-error>
+        </div>
+        <br><br>
+        <button [disabled]="!form.valid">Submit</button>
+    </form>
+</div>
