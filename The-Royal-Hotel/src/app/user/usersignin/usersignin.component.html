@@ -1,0 +1,27 @@
+<p>usersignin works!</p>
+<div class="main">
+    <h1>Sign in</h1>
+    <h2 style="text-align: center;">Login here if you have already account </h2>
+    <form #signInForm="ngForm" (ngSubmit)="onSubmit(signInForm.value)" autocomplete="off">
+  
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Entername" #name1="ngModel" name="userName" required ngModel>
+        <div *ngIf="name1.touched && name1.errors?.['required']" style="color: red;">enter valild input</div>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" #password="ngModel" placeholder="Enter Password" name="userPass" required ngModel>
+        <div *ngIf="password.invalid && password.touched" id="span" style="color: red;">password is required</div><br>
+  
+        <label>
+          <input type="checkbox" #checkbox="ngModel" checked="checked" name="remember" required ngModel> Remember me
+          <div *ngIf="checkbox.invalid && checkbox.touched" id="span" style="color: red;">please check</div>
+        </label>
+      </div>
+  
+      <button (click)="getApiData()"  mat-flat-button color="accent" [disabled]="signInForm.invalid" type="submit">Sign in</button>
+      <div style="text-align: center;" >Not a member?<a routerLink="/usersignup" > Signup now </a> </div>
+  
+    </form>
+  </div>
+  
