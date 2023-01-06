@@ -24,7 +24,7 @@ export class AdminsigninComponent implements OnInit {
       userPass:['',[Validators.required, Validators.maxLength(8)]],
     });
   }
-
+//sing in data
   signInData(data:any){
     console.log(data);
     this.http.get<any>("http://localhost:3000/admin").subscribe(res=>{
