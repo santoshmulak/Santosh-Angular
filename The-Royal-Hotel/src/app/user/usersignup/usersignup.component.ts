@@ -12,6 +12,9 @@ export class UsersignupComponent implements OnInit {
   constructor(private fb:FormBuilder, private dataservice : DataService) { }
 
   ngOnInit(): void {
+    this.formValidation()
+  }
+  formValidation(){
     this.signUpForm = this.fb.group({
       userName:['',[Validators.required,Validators.maxLength(40)]],
       userMob:['',[Validators.required, Validators.maxLength(12)]],
@@ -22,13 +25,12 @@ export class UsersignupComponent implements OnInit {
 
     });
   }
-  postApidata(data:any){
+  
+  postUserdata(data:any){
     console.log(data);
-    
     //postapi
-    this.dataservice.postApiCall(data).subscribe((res)=>{
-      console.log(res);
-      
+    this.dataservice.postUserCall(data).subscribe((res)=>{
+      console.log(res);   
   })
 }
 }

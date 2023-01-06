@@ -1,35 +1,24 @@
-<p>adminsignin works!</p>
+<button mat-button color="warn" routerLink="/adminland">Back</button>
 <div class="main">
-    <h1>Sign in</h1>
-    <h2 style="text-align: center;">Login here if you have already account </h2>
-    <form #signInForm="ngForm" (ngSubmit)="onSubmit()" autocomplete="off">
-  
-      <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Entername" #name1="ngModel" name="userName" required ngModel>
-        <div *ngIf="name1.touched && name1.errors?.['required']" style="color: red;">enter valild input</div>
-  
-        <label for="psw"><b>Password</b></label>
-        <input type="password" #password="ngModel" placeholder="Enter Password" name="userPass" required ngModel>
-        <div *ngIf="password.invalid && password.touched" id="span" style="color: red;">password is required</div><br>
-  
-        <label>
-          <input type="checkbox" #checkbox="ngModel" checked="checked" name="remember" required ngModel> Remember me
-          <div *ngIf="checkbox.invalid && checkbox.touched" id="span" style="color: red;">please check</div>
-        </label>
-      </div>
-  
-      <button (click)="getApiData()"  mat-flat-button color="accent" [disabled]="signInForm.invalid" type="submit">Sign in</button>
-      <div style="text-align: center;" >Not a member?<a routerLink="/adminsignup" > Signup now </a> </div>
-  
-    </form>
-  </div>
-  <div>
-    <li *ngFor="let data of apidata">
-      {{data.name1}}-->{{data.password}}
-      {{data.userName}}-->{{data.userEmail}}
-      {{data.userMob}}-->{{data.gender}}
-      {{data.userPass}}
+    <h2 style="text-align: center;">Login here </h2>
 
-    </li>
-  </div>
+    <form [formGroup]="signInForm" autocomplete="off">
+      <mat-form-field class="inp">
+        <mat-label>Enter Name</mat-label><br>
+        <input matInput type="text" formControlName="userName" placeholder="Enter your name">
+        <mat-error>Enter your name</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field class="inp">
+        <mat-label>Enter Password</mat-label><br>
+        <input matInput type="password" formControlName="userPass" placeholder="Enter password">
+        <mat-error>enter your 8 digit password</mat-error>
+
+      </mat-form-field><br><br>
+
+        <button [disabled]="signInForm.invalid" class="btn" mat-raised-button color="accent"
+          (click)="signInData(signInForm.value)"  >Sign in</button>
+          <div>Not a member?<a routerLink="/adminsignup" > Signup now  </a> </div>
+    </form>
+</div>
+

@@ -11,6 +11,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersuccesComponent } from './usersucces/usersucces.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { HotelbookingComponent } from './hotelbooking/hotelbooking.component';
 
 
 
@@ -18,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     UserlandComponent,
     UsersigninComponent,
-    UsersignupComponent
+    UsersignupComponent,
+    UsersuccesComponent,
+    HotelbookingComponent
   ],
   imports: [
     CommonModule,
@@ -29,8 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     MatRadioModule,
     MatInputModule,
-    HttpClientModule
-
+    HttpClientModule,
+    Ng2SearchPipeModule
+    
   ]
 })
 export class UserModule { }

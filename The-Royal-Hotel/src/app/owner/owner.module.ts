@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { OwnerRoutingModule } from './owner-routing.module';
 import { OwnersigninComponent } from './ownersignin/ownersignin.component';
 import { OwnersignupComponent } from './ownersignup/ownersignup.component';
@@ -11,13 +10,21 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
+import { OsuccesComponent } from './osucces/osucces.component';
+import { OfaillComponent } from './ofaill/ofaill.component';
+import { HoteldetailComponent } from './hoteldetail/hoteldetail.component';
+import {MatIconModule} from '@angular/material/icon'
+
 
 
 @NgModule({
   declarations: [
     OwnersigninComponent,
     OwnersignupComponent,
-    OwnerlandComponent
+    OwnerlandComponent,
+    OsuccesComponent,
+    OfaillComponent,
+    HoteldetailComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     MatRadioModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ]
 })
 export class OwnerModule { }

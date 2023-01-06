@@ -1,7 +1,6 @@
-<p>ownersignup works!</p>
+<button mat-button color="warn" routerLink="/ownerland">Back</button>
 <div class="main">
-    <h1 style="text-align:center ;"><b>Sign Up</b></h1>
-    <h2 style="text-align:center ;">Please fill in this form to create an account</h2>
+    <h2 style="text-align:center ;">Sign up to create an account</h2>
     <form [formGroup]="signUpForm!" autocomplete="off">
         <mat-form-field>
             <mat-label>Enter Name</mat-label><br>
@@ -41,9 +40,9 @@
 
         <div style="text-align: center;">
             <button [disabled]="signUpForm.invalid" class="btn" mat-raised-button color="accent"
-                (click)="postApidata(signUpForm.value)" >Sign up</button>
+                (click)="postOwnerdata(signUpForm.value)" >Sign up</button>
         </div><br>
 
-        <div style="text-align: center;">Already have member?<a routerLink="/ownersignin"> Signin here </a> </div>
+        <div style="text-align: center;">Already have member?<a routerLink="/ownersignin"> Sign in here </a> </div>
     </form>
 </div>

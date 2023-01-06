@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -11,11 +12,14 @@ export class AdminsignupComponent implements OnInit {
   signUpForm!:FormGroup;
 
 
-  constructor(private fb:FormBuilder, private dataservice : DataService ) { }
+  constructor(private fb:FormBuilder, private dataservice : DataService, private roter:Router) { }
 
   ngOnInit(): void {
+   this.formValidation()
+  }
+  formValidation(){
     this.signUpForm = this.fb.group({
-      userName:['',[Validators.required,Validators.maxLength(40)]],
+      userName: new FormControl('',[Validators.pattern("^[a-zA-Z]+$")]),
       userMob:['',[Validators.required, Validators.maxLength(12)]],
       userEmail:['',[Validators.required, Validators.email]],
       userPass:['',[Validators.required, Validators.maxLength(8)]],
@@ -25,14 +29,17 @@ export class AdminsignupComponent implements OnInit {
     });
   }
 
-  postApidata(data:any){
+  postAdmindata(data:any){
     console.log(data);
     
     //postapi
-    this.dataservice.postApiCall(data).subscribe((res)=>{
+    this.dataservice.postAdminCall(data).subscribe((res)=>{
       console.log(res);
       
   })
+  alert("you have suceesfully create account")
+  this.roter.navigateByUrl('/adminsignin')
+
 }
   
   

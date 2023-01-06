@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -9,36 +10,47 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./usersignin.component.scss']
 })
 export class UsersigninComponent implements OnInit {
+  signInForm!: FormGroup;
+  resonseData: any;
   apidata: any;
 
 
-  constructor(private dataservice : DataService ,private http:HttpClient) { }
+  constructor(private dataservice : DataService,private fb : FormBuilder ,private http:HttpClient,private router :Router) { }
 
   ngOnInit(): void {
+   this.formValidation
   }
-  onSubmit(signInForm:NgForm){
-    console.log(signInForm);
-    console.log(signInForm.name);
-    this.http.get<any>("http://localhost:3000/user").subscribe(res=>{
-      console.log(res);
-      for (let index = 0; index < res.length; index++) {
-        if (signInForm.name==res[index].userName){
-          alert("login succesfully")
-        }
-        
-      }
-      
 
-    })
-    
+  formValidation(){
+    this.signInForm = this.fb.group({
+      userName:['',[Validators.required,Validators.maxLength(40)]],
+      userPass:['',[Validators.required, Validators.maxLength(8)]],
+    });
   }
-  getApiData(){
-    this.dataservice.getApiCall().subscribe((data)=>{
+  
+  signInData(data:any){
+    console.log(data);
+    this.http.get<any>("http://localhost:3000/user").subscribe(res=>{
+      const user = res.find((a:any)=>{
+        return a.userName===this.signInForm.value.userName && a.userPass===this.signInForm.value.userPass
+      })
+      if(user){
+        alert("Login successful");
+        this.signInForm.reset();
+        this.router.navigateByUrl('/userland')
+      }
+      else{
+        alert("user not found")
+        this.signInForm.reset();
+        // this.router.navigateByUrl('adminfaill')
+      }
+    })
+  }
+  
+  getUserData(){
+    this.dataservice.getUserCall().subscribe((data)=>{
     this.apidata=data
     console.log(data);
-
-    
-      
     })
   }
   

@@ -11,6 +11,10 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminsuccesComponent } from './adminsucces/adminsucces.component';
+import { AdminfaillComponent } from './adminfaill/adminfaill.component';
+import { MatIconModule } from '@angular/material/icon';
+import { TestComponent } from './test/test.component';
+import { SuccesComponent } from './succes/succes.component';
 
 
 
@@ -19,7 +23,11 @@ import { AdminsuccesComponent } from './adminsucces/adminsucces.component';
     AdminlandComponent,
     AdminsignupComponent,
     AdminsigninComponent,
-    AdminsuccesComponent
+    AdminsuccesComponent,
+    AdminfaillComponent,
+    TestComponent,
+    SuccesComponent
+    
   ],
   imports: [
     CommonModule,
@@ -30,7 +38,8 @@ import { AdminsuccesComponent } from './adminsucces/adminsucces.component';
     ReactiveFormsModule,
     MatRadioModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ]
 })
 export class AdminModule { }

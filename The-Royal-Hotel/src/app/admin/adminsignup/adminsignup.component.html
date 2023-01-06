@@ -1,7 +1,6 @@
-<p>adminsignup works!</p>
+<button mat-button color="warn" routerLink="/adminland">Back</button>
 <div class="main">
-    <h1 style="text-align:center ;"><b>Sign Up</b></h1>
-    <h2 style="text-align:center ;">Please fill in this form to create an account</h2>
+    <h2 style="text-align:center ;">Sign up to create an account</h2>
     <form [formGroup]="signUpForm!" autocomplete="off">
         <mat-form-field>
             <mat-label>Enter Name</mat-label><br>
@@ -41,7 +40,7 @@
 
         <div style="text-align: center;">
             <button [disabled]="signUpForm.invalid" class="btn" mat-raised-button color="accent"
-                (click)="postApidata(signUpForm.value)" >Sign up</button>
+                (click)="postAdmindata(signUpForm.value)" >Sign up</button>
         </div><br>
 
         <div style="text-align: center;">Already have member?<a routerLink="/adminsignin"> Signin here </a> </div>

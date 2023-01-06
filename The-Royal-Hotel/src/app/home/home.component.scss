@@ -1,15 +1,13 @@
-// #img{
-//     background-color: url('~src/assets/img/royal.jpg');
-// }
-a:hover{
-    background-color: yellow;
+
+.main{
+    background-image: url('~src/assets/img/water.jpeg');
+    opacity: 0.5px;
 }
-.container{
-    height: 1000px;
+body{
+    background-image: url('~src/assets/img/royal.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
 }
-#back{
-opacity: 0.5;
+.bg{
+    margin-left: 5px;
 }
-// div{
-//     background-color: url('~src/assets/img/royal.jpg');
-// }
